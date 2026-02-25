@@ -77,7 +77,8 @@ async def predict(
     confidence_level=np.max(prediction[0])
     actions={
     "Potato___Early_blight":"Prune infected lower leaves and apply a copper-based fungicide to stop the spread of 'target-spot' lesions.",
-    "Potato___Late_blight":"Immediately rogue (destroy) infected plants and apply aggressive systemic fungicides to prevent total crop loss."
+    "Potato___Late_blight":"Immediately rogue (destroy) infected plants and apply aggressive systemic fungicides to prevent total crop loss.",
+    "Potato___Healthy":"The plant is healthy"
   }
     
 
