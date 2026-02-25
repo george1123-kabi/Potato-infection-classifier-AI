@@ -75,12 +75,19 @@ async def predict(
 
     predicted_img=CLASS_NAMES[np.argmax(prediction[0])]
     confidence_level=np.max(prediction[0])
+    actions={
+    "Potato___Early_blight":"Prune infected lower leaves and apply a copper-based fungicide to stop the spread of 'target-spot' lesions.",
+    "Potato___Late_blight":"Immediately rogue (destroy) infected plants and apply aggressive systemic fungicides to prevent total crop loss."
+  }
+    
+
 
     predictions={
         "class_name":predicted_img,
         "confidence":float(confidence_level),
+        "action":actions[predicted_img]
+        
     }
-
 
     return predictions
     
